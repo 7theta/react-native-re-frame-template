@@ -1,0 +1,72 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '12.0'
+use_frameworks!
+inhibit_all_warnings!
+
+project '{{ios-project-name}}.xcodeproj'
+workspace '{{ios-project-name}}'
+
+abstract_target '{{ios-project-name}}Project' do
+
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'CxxBridge',
+    'DevSupport',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTBlob',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTNetwork',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+    'RCTLinkingIOS',
+    'RCTPushNotification'
+  ]
+
+  pod 'yoga',              :path => '../node_modules/react-native/ReactCommon/yoga'
+  pod 'DoubleConversion',  :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog',              :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod 'Folly',             :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+
+  # Poterntially useful libraries
+  # pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk', :subspecs => [
+  #   'Core',
+  #   'Login'
+  # ]
+
+  # pod 'RNCAsyncStorage',             :path => '../node_modules/@react-native-community/async-storage'
+  # pod 'react-native-slider',         :path => '../node_modules/@react-native-community/slider'
+  # pod 'react-native-webview',        :path => '../node_modules/react-native-webview'
+  # pod 'ReactNativePermissions',      :path => '../node_modules/react-native-permissions'
+  # pod 'RNGestureHandler',            :path => '../node_modules/react-native-gesture-handler'
+
+  target '{{ios-project-name}}' do
+
+    target '{{ios-project-name}}Tests' do
+      inherit! :search_paths
+    end
+
+    target '{{ios-project-name}}UITests' do
+      inherit! :search_paths
+    end
+  end
+end
+
+swift_target_versions = {
+}
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+
+    target.build_configurations.each do |config|
+    end
+  end
+end

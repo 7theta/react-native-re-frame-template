@@ -1,0 +1,13 @@
+{:source-paths
+ ["src"]
+
+ :dependencies
+ [[reagent "0.8.1"]
+  [re-frame "0.10.6"]]
+
+ :builds
+ {:app {:target :react-native
+        :init-fn {{ns-name}}.core/init
+        :output-dir "app"
+        :release {:compiler-options {:optimizations :simple ; :advanced when ready
+                                     :infer-externs :auto}}}}}}
