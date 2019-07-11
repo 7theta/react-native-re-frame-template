@@ -55,13 +55,14 @@
   ""
   [name & options]
   (let [[name group-id] (extract-name-and-group-id name)
+        group-id (or group-id "com.example")
         {{:keys [android-package ios-organization-name]} :options} (parse-opts options cli-options)
         data {:name name
               :ns-name (sanitize-ns name)
               :sanitized (name-to-path name)
               :group-id group-id
               :js-module-name (str-util/camel-case name)
-              :android-package (str-util/android-sanitize (or (str group-id "." name) android-package))
+              :android-package (str-util/android-sanitize (or android-package (str group-id "." name)))
               :ios-bundle-prefix group-id
               :ios-organization-name (or ios-organization-name (extract-ios-organization-name group-id))
               :ios-project-name (str-util/camel-case name)}]
