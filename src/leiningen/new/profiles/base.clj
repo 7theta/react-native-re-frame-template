@@ -7,7 +7,7 @@
    ["src/{{sanitized}}/core.cljs" (render "src/template/core.cljs" data)]
    ["src/{{sanitized}}/subs.cljs" (render "src/template/subs.cljs" data)]
    
-   [".gitignore" (render ".gitignore" data)]
+   [".gitignore" (render "gitignore.txt" data)]
    ["CHANGELOG.md" (render "CHANGELOG.md" data)]
    ["index.android.js" (render "index.android.js" data)]
    ["index.ios.js" (render "index.ios.js" data)]
