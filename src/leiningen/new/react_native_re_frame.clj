@@ -63,6 +63,7 @@
               :group-id group-id
               :js-module-name (str-util/camel-case name)
               :android-package (str-util/android-sanitize (or android-package (str group-id "." name)))
+              :android-app-name (str-util/camel-case name)
               :ios-bundle-prefix group-id
               :ios-organization-name (or ios-organization-name (extract-ios-organization-name group-id))
               :ios-project-name (str-util/camel-case name)}]
