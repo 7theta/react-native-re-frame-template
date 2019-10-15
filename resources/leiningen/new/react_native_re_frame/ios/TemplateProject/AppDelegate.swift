@@ -40,6 +40,6 @@ extension AppDelegate {
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        return RCTLinkingManager.application(application, continue: userActivity, restorationHandler: { restorationHandler(($0 as! [UIUserActivityRestoring])) })
+        return RCTLinkingManager.application(application, continue: userActivity, restorationHandler: restorationHandler)
     }
 }
