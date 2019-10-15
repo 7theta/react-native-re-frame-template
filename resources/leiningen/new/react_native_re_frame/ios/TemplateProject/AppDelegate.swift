@@ -4,7 +4,6 @@
 //
 
 import UIKit
-import React
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +15,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        URLSessionConfiguration.default.httpMaximumConnectionsPerHost = 100
-        
         let config = ReactViewController.LaunchConfig(
             bundleRoot: "index.ios",
             moduleName: "{{js-module-name}}",

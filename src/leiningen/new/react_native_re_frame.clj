@@ -61,7 +61,7 @@
               :ns-name (sanitize-ns name)
               :sanitized (name-to-path name)
               :group-id group-id
-              :js-module-name (str-util/camel-case name)
+              :js-module-name (sanitize-ns name)
               :android-package (str-util/android-sanitize (or android-package (str group-id "." name)))
               :android-app-name (str-util/camel-case name)
               :ios-bundle-prefix group-id

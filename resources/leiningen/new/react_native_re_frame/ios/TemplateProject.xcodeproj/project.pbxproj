@@ -45,6 +45,7 @@
 		34B3E53E22D4132D0093679B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34B3E54B22D416350093679B /* ReactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactViewController.swift; sourceTree = "<group>"; };
 		34B3E54C22D45EA90093679B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34CF068123554C74000367FA /* {{ios-project-name}}-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "{{ios-project-name}}-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 				34B3E54C22D45EA90093679B /* LaunchScreen.storyboard */,
 				34B3E52322D4132D0093679B /* Assets.xcassets */,
 				34B3E52822D4132D0093679B /* Info.plist */,
+				34CF068123554C74000367FA /* {{ios-project-name}}-Bridging-Header.h */,
 			);
 			path = {{ios-project-name}};
 			sourceTree = "<group>";
@@ -433,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = {{ios-project-name}}/Info.plist;
@@ -442,6 +445,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = {{ios-bundle-prefix}}.{{ios-project-name}};
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "{{ios-project-name}}/{{ios-project-name}}-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = {{ios-project-name}}/Info.plist;
@@ -460,6 +466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = {{ios-bundle-prefix}}.{{ios-project-name}};
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "{{ios-project-name}}/{{ios-project-name}}-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

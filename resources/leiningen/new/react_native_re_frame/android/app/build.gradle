@@ -82,15 +82,8 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'com.facebook.react:react-native:0.59.10'
-
-    // implementation project(':react-native-fbsdk')
-    // implementation project(':react-native-gesture-handler')
-    // implementation project(':react-native-webview')
-    // implementation project(':@react-native-community_async-storage')
-    // implementation project(':@react-native-community_slider')
+    implementation 'com.facebook.react:react-native:+'
 }
 
-// FbSdk looks complicated with this
-//apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle")
-//applyNativeModulesAppBuildGradle(project)
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle")
+applyNativeModulesAppBuildGradle(project)
