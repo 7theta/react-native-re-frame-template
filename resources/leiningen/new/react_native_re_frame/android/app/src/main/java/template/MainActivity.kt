@@ -2,13 +2,9 @@ package {{android-package}}
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.KeyEvent
 import androidx.fragment.app.FragmentActivity
-import com.facebook.react.ReactApplication
 import com.facebook.react.modules.core.PermissionListener
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : FragmentActivity(), ReactFragment.ActivityDelegate {
 
