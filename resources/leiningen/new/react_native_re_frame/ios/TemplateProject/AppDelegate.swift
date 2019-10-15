@@ -17,7 +17,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let config = ReactViewController.LaunchConfig(
             bundleRoot: "index.ios",
-            moduleName: "{{ns-name}}",
+            moduleName: "{{js-module-name}}",
             launchOptions: launchOptions)
         let viewController = ReactViewController(config: config)
         

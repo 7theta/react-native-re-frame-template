@@ -1,5 +1,5 @@
 {
-  "name": "{{ns-name}}",
+  "name": "{{js-module-name}}",
   "version": "0.0.1",
   "private": true,
   "scripts": {

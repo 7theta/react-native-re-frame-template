@@ -19,7 +19,7 @@ class MainActivity : FragmentActivity(), ReactFragment.ActivityDelegate {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fragment = ReactFragment.newInstance("{{ns-name}}")
+        val fragment = ReactFragment.newInstance("{{js-module-name}}")
         reactFragment = fragment
 
         supportFragmentManager
