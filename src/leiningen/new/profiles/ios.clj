@@ -21,4 +21,5 @@
      ["ios/{{ios-project-name}}/Info.plist" (render "ios/TemplateProject/Info.plist" data)]
      ["ios/{{ios-project-name}}/LaunchScreen.storyboard" (render "ios/TemplateProject/LaunchScreen.storyboard" data)]
      ["ios/{{ios-project-name}}/ReactViewController.swift" (render "ios/TemplateProject/ReactViewController.swift" data)]
+     ["ios/{{ios-project-name}}/{{ios-project-name}}-Bridging-Header.h" (render "ios/TemplateProject/Template-Bridging-Header.h" data)]
      ]))

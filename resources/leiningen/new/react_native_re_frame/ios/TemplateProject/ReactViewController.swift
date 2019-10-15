@@ -4,7 +4,6 @@
 //
 
 import UIKit
-import React
 
 final class ReactViewController : UIViewController {
     
@@ -37,7 +36,7 @@ final class ReactViewController : UIViewController {
             bundleURL: bundleURL,
             moduleName: config.moduleName,
             initialProperties: nil,
-            launchOptions: config.launchOptions)!
+            launchOptions: config.launchOptions)
         self.rctView = rctView
         
         let view = UIView(frame: UIScreen.main.bounds)
