@@ -4,7 +4,6 @@
 //
 
 import UIKit
-import React
 
 final class ReactViewController : UIViewController {
     

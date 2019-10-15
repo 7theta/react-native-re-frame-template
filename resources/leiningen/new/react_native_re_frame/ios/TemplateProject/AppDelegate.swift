@@ -4,7 +4,6 @@
 //
 
 import UIKit
-import React
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +19,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let config = ReactViewController.LaunchConfig(
             bundleRoot: "index.ios",
-            moduleName: "{{js-module-name}}",
+            moduleName: "{{ns-name}}",
             launchOptions: launchOptions)
         let viewController = ReactViewController(config: config)
         

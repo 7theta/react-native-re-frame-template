@@ -1,6 +1,5 @@
 package {{android-package}}
 
-import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -24,7 +23,7 @@ class MainActivity : FragmentActivity(), ReactFragment.ActivityDelegate {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fragment = ReactFragment.newInstance("{{js-module-name}}")
+        val fragment = ReactFragment.newInstance("{{ns-name}}")
         reactFragment = fragment
 
         supportFragmentManager
